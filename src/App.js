@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router , Route , Switch } from "react-router-dom";
+import { useState } from "react/cjs/react.development";
+import Header from "./components/Header/Header";
+import Inventory from "./components/Invertory/Inventory";
+import Main from "./components/Main/Main";
+import NotFound from "./components/Not-Found/NotFound";
+import Orders from "./components/Orders/Orders";
 
+
+// Main component
 function App() {
+
+  const [valu , setValue] = useState('');
+  const getinputValue = (e) => {
+    const valu = e.target.value;
+    setValue(valu);
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router> 
+    <Header fnc={getinputValue}> </Header>
+
+      <Switch>
+
+        <Route path='/home'>
+           <Main inputValue={valu}></Main>
+        </Route>
+
+        <Route path='/orders'>
+           <Orders inputValue={valu}></Orders>
+        </Route>
+
+        <Route path='/inventory'>
+           <Inventory inputValue={valu}></Inventory>
+        </Route>
+
+        <Route exact path='/'>
+           <Main inputValue={valu}></Main>
+        </Route>
+
+        <Route exact path='*'>
+           <NotFound inputValue={valu}></NotFound>
+        </Route>
+
+
+       </Switch>      
+    </Router>
   );
 }
 

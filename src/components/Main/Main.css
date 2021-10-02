@@ -1,0 +1,33 @@
+.shop {
+  display: grid;
+  grid-template-columns:  3fr 1fr;
+}
+
+.product {
+  border-right: 1px solid green;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.product h3 {
+  width: 400px;
+  font-weight: 500;
+}
+
+.single-product {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  align-items: center;
+  border-bottom: 1px solid green;
+  margin-right: 5px;
+}
+
+.single-product button {
+  padding: 10px;
+  border: none;
+  background-color: rgb(88, 88, 12);
+  border-radius: 5px;
+  color: wheat;
+  font-size: 16px;
+}

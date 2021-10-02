@@ -1,0 +1,55 @@
+/* Header desing */
+.header {
+ margin-top: 5px;
+}
+
+.header img {
+  width: 400px;
+  display: block;
+  margin: auto;
+}
+/* input field desing */
+.input-conteiner {
+  background-color: pink;
+  padding: 10px;
+}
+.input-conteiner input {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+::placeholder {
+  color:black;
+  font-size: 14px;
+}
+
+/* nav desing */
+
+.nav {
+  margin-top: 5px;
+  background-color: black;
+  text-align: center;
+  line-height: 40px;
+}
+.nav a {
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 20px;
+  color: white;
+  padding: 5px;
+}
+
+.nav a:hover {
+  background-color: thistle;
+}
+
+.nav :first-child{
+  margin-left: 0;
+}
+
+
+
